@@ -39,10 +39,10 @@ class Login implements ActionListener{
         logo.setBounds(130,150,200,30);
         logo.setFont(new Font("Tahoma", Font.BOLD, 20));
         
-        userName = new JTextField("Username");
+        userName = new JTextField("admin");
         userName.setBounds(450,100,300,30);
         
-        pass = new JPasswordField("Password");
+        pass = new JPasswordField("admin");
         pass.setBounds(450,150,300,30);
 
         cb = new JCheckBox("Remember Me");

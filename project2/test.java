@@ -1,11 +1,12 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
-class HomePage implements ActionListener{
-    JFrame jf;
+class Test implements ActionListener{
+    JFrame hjf;
     JLabel custName,date,phNo,email,subTotal,disCont,total,product,qty,srNo,grandTotal;
     JTextField gCName,gpNo,gemail,gdate,sSubTotal,sDisCount,sGrandTotal;
     JButton print,save,create;
-    HomePage()
+    Test()
     {
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
@@ -14,13 +15,13 @@ class HomePage implements ActionListener{
         } catch (Exception err) {
             err.printStackTrace();
         }
-        // HomePage JFrame
-        jf= new JFrame("HomePage");
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.setLayout(null);
-        jf.setVisible(true);
-        jf.setBounds(250,100,800,400);
-        jf.setResizable(true);
+        // Test JFrame
+        hjf = new JFrame("Test");
+        hjf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        hjf.setLayout(null);
+        hjf.setVisible(true);
+        hjf.setBounds(250,100,800,400);
+        hjf.setResizable(true);
 
         custName = new JLabel("Custer Name");
         custName.setBounds(20,20,100,30);
@@ -77,26 +78,26 @@ class HomePage implements ActionListener{
         create.setBounds(600,300,80,30);
         create.addActionListener(this);
 
-        jf.add(custName);
-        jf.add(gCName);    
-        jf.add(date);
-        jf.add(gdate);
-        jf.add(phNo);
-        jf.add(gpNo);      
-        jf.add(email);
-        jf.add(gemail);
+        hjf.add(custName);
+        hjf.add(gCName);    
+        hjf.add(date);
+        hjf.add(gdate);
+        hjf.add(phNo);
+        hjf.add(gpNo);      
+        hjf.add(email);
+        hjf.add(gemail);
 
 
-        jf.add(subTotal);
-        jf.add(sSubTotal);
-        jf.add(disCont);
-        jf.add(sDisCount);
-        jf.add(grandTotal);
-        jf.add(sGrandTotal);
+        hjf.add(subTotal);
+        hjf.add(sSubTotal);
+        hjf.add(disCont);
+        hjf.add(sDisCount);
+        hjf.add(grandTotal);
+        hjf.add(sGrandTotal);
 
-        jf.add(print);
-        jf.add(save);
-        jf.add(create);
+        hjf.add(print);
+        hjf.add(save);
+        hjf.add(create);
 
        
     }
@@ -109,15 +110,9 @@ class HomePage implements ActionListener{
         String Cdate = date.toString();
         gdate.setText(Cdate);
         }
-        // Save Button
-        if(e.getSource()==save)
-        {
-            //..code
-        }
-        // New Button
-        if(e.getSource()==create)
-        {
-           //..code
-        }
+        
+    }
+    public static void main(String[] args) {
+        new Test();
     }
 }
